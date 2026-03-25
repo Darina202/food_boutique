@@ -11,7 +11,7 @@ const Hero = () => {
         With Food Boutique, you're not just subscribing to food, you're signing
         up for a fresher, fitter, and happier you.
       </p>
-      <img src={heroImg} />
+      <img src={heroImg} alt="Fresh vegetables in Food Boutique" />
     </div>
   );
 };
