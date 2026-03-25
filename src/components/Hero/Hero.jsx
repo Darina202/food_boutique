@@ -1,8 +1,12 @@
-import heroImg from "../../img/hero/hero-desktop.jpg";
+import heroImg from '../../img/hero/hero-desktop.jpg';
+import styles from './hero.module.css';
+
 const Hero = () => {
   return (
     <div>
-      <h1>Welcome to the Food Boutique!</h1>
+      <h1 className={styles.title}>
+        Welcome to the <span className={styles.titleColor}>Food</span> Boutique!
+      </h1>
       <p>
         With Food Boutique, you're not just subscribing to food, you're signing
         up for a fresher, fitter, and happier you.
