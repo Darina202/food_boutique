@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/food_boutique/static/css/main.2c2b94d5.css",
-    "main.js": "/food_boutique/static/js/main.ccf3bdda.js",
+    "main.css": "/food_boutique/static/css/main.4a2771ed.css",
+    "main.js": "/food_boutique/static/js/main.dd831908.js",
     "static/media/hero-desktop.jpg": "/food_boutique/static/media/hero-desktop.9b4b9dff9b076ea4b541.jpg",
     "index.html": "/food_boutique/index.html",
-    "main.2c2b94d5.css.map": "/food_boutique/static/css/main.2c2b94d5.css.map",
-    "main.ccf3bdda.js.map": "/food_boutique/static/js/main.ccf3bdda.js.map"
+    "main.4a2771ed.css.map": "/food_boutique/static/css/main.4a2771ed.css.map",
+    "main.dd831908.js.map": "/food_boutique/static/js/main.dd831908.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c2b94d5.css",
-    "static/js/main.ccf3bdda.js"
+    "static/css/main.4a2771ed.css",
+    "static/js/main.dd831908.js"
   ]
 }
