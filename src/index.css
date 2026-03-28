@@ -12,16 +12,53 @@ html {
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: 'Neue Montreal';
+  src:
+    local('Neue Montreal Regular'),
+    local('Neue-Montreal-Regular'),
+    url('./fonts/NeueMontreal-Regular.woff2') format('woff2'),
+    url('./fonts/NeueMontreal-Regular.woff') format('woff'),
+    url('./fonts/NeueMontreal-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src:
+    local('Neue Montreal Medium'),
+    local('Neue-Montreal-Medium'),
+    url('./fonts/NeueMontreal-Medium.woff2') format('woff2'),
+    url('./fonts/NeueMontreal-Medium.woff') format('woff'),
+    url('./fonts/NeueMontreal-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Quincy CF';
+  src:
+    local('Quincy CF Black'),
+    local('Quincy-CF-Black'),
+    url('./fonts/QuincyCF-Black.woff2') format('woff2'),
+    url('./fonts/QuincyCF-Black.woff') format('woff'),
+    url('./fonts/QuincyCF-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+:root {
+  --black: #010101;
+  --green: #6d8434;
+  --dark-green: #586f1f;
+  --grey: #e8e8e2;
+  --white: #ffffff;
+  --light-grey: #fafafa;
+}
+
 body {
+  font-family: 'Neue Montreal', sans-serif;
+  color: var(--black);
+  background: var(--grey);
   margin: 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
-    Cantarell, 'Helvetica Neue', sans-serif;
-  color: #212121;
-  background-color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #e8e8e2;
 }
 
 code {
@@ -47,7 +84,9 @@ ol {
   margin-bottom: 0;
   padding-left: 0;
 }
-
+li {
+  list-style: none;
+}
 img {
   display: block;
   max-width: 100%;
@@ -55,4 +94,36 @@ img {
 }
 a {
   text-decoration: none;
+  color: currentColor;
 }
+
+a,
+input,
+button {
+  outline: none;
+}
+
+button {
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+} */
