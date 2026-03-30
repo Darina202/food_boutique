@@ -1,20 +1,28 @@
 import styles from './header.module.css';
 import sprite from '../../img/icons.svg';
+import Logo from 'components/Logo/Logo';
+import { NavLink } from 'react-router';
 const Header = () => {
   return (
     <div className={styles.header}>
-      <a className={styles.logo} href="./">
-        <span className={styles.icon}>
-          <svg width="20" height="20">
-            <use href={`${sprite}#icon-logo`}></use>
-          </svg>
-        </span>
-        Food Boutique
-      </a>
-      <div className={styles.menu}>
-        <a className={styles.btn}>Home</a>
-        <a className={styles.cart}>Cart (3)</a>
-      </div>
+      <Logo />
+      <nav>
+        <ul className={styles.menu}>
+          <li className={styles.btn}>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink className={styles.cart} to="/cart">
+              <span className={styles.icon}>
+                <svg width="18" height="18">
+                  <use href={`${sprite}#icon-cart`}></use>
+                </svg>
+              </span>
+              Cart (3)
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };

@@ -1,0 +1,33 @@
+.logo {
+  font-family:
+    Quincy CF,
+    sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.footer {
+  color: var(--grey);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--green);
+  border-radius: 50%;
+  fill: var(--grey);
+}
+
+.footer .icon {
+  fill: var(--green);
+  background: var(--grey);
+}

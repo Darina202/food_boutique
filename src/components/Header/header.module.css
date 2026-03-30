@@ -1,6 +1,8 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 77px;
 }
 
 .btn {
@@ -12,22 +14,8 @@
   padding: 12px 28px;
   width: 104px;
   height: 48px;
-  background: #6d8434;
+  background: var(--green);
   cursor: pointer;
-}
-
-.logo {
-  font-family:
-    Quincy CF,
-    sans-serif;
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 100%;
-  letter-spacing: -0.02em;
-  color: #010101;
-  display: flex;
-  gap: 8px;
-  align-items: center;
 }
 
 .cart {
@@ -35,17 +23,21 @@
   font-size: 18px;
   line-height: 133%;
   text-transform: uppercase;
-  color: #010101;
+  color: var(--black);
+  display: flex;
+  gap: 14px;
+  align-items: center;
 }
+
 .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  width: 32px;
-  height: 32px;
-  background: #6d8434;
-  border-radius: 50%;
+  border-radius: 30px;
+  width: 38px;
+  height: 38px;
+  background: var(--green);
+  fill: var(--grey);
 }
 
 .menu {
