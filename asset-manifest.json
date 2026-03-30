@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/food_boutique/static/css/main.53ef55be.css",
-    "main.js": "/food_boutique/static/js/main.2c43622f.js",
+    "main.css": "/food_boutique/static/css/main.9b94fff4.css",
+    "main.js": "/food_boutique/static/js/main.f19cebf8.js",
     "static/media/QuincyCF-Black.ttf": "/food_boutique/static/media/QuincyCF-Black.8942f0f51051d65f5d5c.ttf",
     "static/media/hero-desktop.jpg": "/food_boutique/static/media/hero-desktop.9b4b9dff9b076ea4b541.jpg",
     "static/media/QuincyCF-Black.woff": "/food_boutique/static/media/QuincyCF-Black.acc7c293589a2e62554a.woff",
@@ -14,11 +14,11 @@
     "static/media/NeueMontreal-Medium.woff2": "/food_boutique/static/media/NeueMontreal-Medium.929d810ac94c5179d2a3.woff2",
     "static/media/NeueMontreal-Regular.woff2": "/food_boutique/static/media/NeueMontreal-Regular.7b5a8273648a9482e29f.woff2",
     "index.html": "/food_boutique/index.html",
-    "main.53ef55be.css.map": "/food_boutique/static/css/main.53ef55be.css.map",
-    "main.2c43622f.js.map": "/food_boutique/static/js/main.2c43622f.js.map"
+    "main.9b94fff4.css.map": "/food_boutique/static/css/main.9b94fff4.css.map",
+    "main.f19cebf8.js.map": "/food_boutique/static/js/main.f19cebf8.js.map"
   },
   "entrypoints": [
-    "static/css/main.53ef55be.css",
-    "static/js/main.2c43622f.js"
+    "static/css/main.9b94fff4.css",
+    "static/js/main.f19cebf8.js"
   ]
 }
