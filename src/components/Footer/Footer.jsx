@@ -1,39 +1,31 @@
 import styles from './footer.module.css';
-import sprite from '../../img/icons.svg';
 import Logo from '../Logo/Logo';
-import { Link } from 'react-router';
+import SocialList from './SocialList/SocialList';
+import EmailForm from './EmailForm/EmailForm';
+
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <div className={styles.right}>
-        <Logo colorClass="footer" />
-        <ul className={styles.socialList}>
-          <li className={styles.social}>
-            <Link to="https://www.facebook.com">
-              <svg className={styles.style} width="28" height="28">
-                <use href={`${sprite}#icon-facebook`} />
-              </svg>
-            </Link>
-          </li>
-          <li className={styles.social}>
-            <Link to="https://www.instagram.com/">
-              <svg className={styles.style} width="28" height="28">
-                <use href={`${sprite}#icon-instagram`} />
-              </svg>
-            </Link>
-          </li>
-          <li className={styles.social}>
-            <Link to="https://www.youtube.com/">
-              <svg className={styles.style} width="28" height="28">
-                <use href={`${sprite}#icon-youtube`} />
-              </svg>
-            </Link>
-          </li>
-        </ul>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <div className={styles.right}>
+            <Logo colorClass="footer" />
+            <SocialList />
+          </div>
+          <div className={styles.center}>
+            <h4 className={styles.descTitle}>Discover the Variety of Flavors and Quality</h4>
+            <p className={styles.desctext}>
+              An online store where you will find fresh, natural and delicious products for a healthy life and
+              unforgettable gastronomic adventures.
+            </p>
+          </div>
+          <EmailForm />
+        </div>
+        <div className={styles.socket}>
+          <p>Food Boutique. All rights reserved.</p>
+          <p>Privacy Policy / Terms of Service</p>
+        </div>
       </div>
-
-      <p>Description</p>
-      <p>Email</p>
     </div>
   );
 };

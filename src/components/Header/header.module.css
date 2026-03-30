@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 77px;
+  padding: 24px 0 77px;
+  margin: 0 auto;
+  max-width: 1240px;
 }
 
 .btn {

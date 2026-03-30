@@ -1,11 +1,18 @@
 .footer {
   background-color: var(--green);
-  padding-top: 40px;
-  padding-bottom: 166px;
+  padding: 40px 0 20px;
+}
+
+.container {
+  max-width: 1240px;
   margin: 0 auto;
+}
+
+.content {
   display: flex;
   gap: 148px;
   justify-content: space-between;
+  margin-bottom: 128px;
 }
 
 .right {
@@ -14,22 +21,33 @@
   gap: 20px;
 }
 
-.socialList {
+.center {
+  max-width: 410px;
   display: flex;
-  gap: 12px;
-  align-items: center;
-  /* margin-top: 20px; */
+  flex-direction: column;
+  gap: 20px;
+}
+.descTitle {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: var(--grey);
+}
+.desctext {
+  font-size: 18px;
+  line-height: 133%;
+  color: rgba(232, 232, 226, 0.7);
 }
 
-.social {
-  border: 1px solid rgba(232, 232, 226, 0.3);
-  border-radius: 10px;
-  padding: 8px;
-  width: 44px;
-  height: 44px;
+.socket {
+  display: flex;
+  justify-content: space-between;
 }
 
-.style {
-  fill: var(--grey);
-  opacity: 0.8;
+.socket p {
+  font-size: 14px;
+  line-height: 129%;
+  color: var(--grey);
+  opacity: 0.9;
 }
