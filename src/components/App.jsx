@@ -3,11 +3,9 @@ import Layout from './Layout/Layout';
 
 const App = () => {
   return (
-    <div>
-      <Layout>
-        <Hero />
-      </Layout>
-    </div>
+    <>
+      <Layout>{/* <Hero /> */}</Layout>
+    </>
   );
 };
 export default App;

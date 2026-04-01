@@ -2,9 +2,10 @@ import styles from './header.module.css';
 import sprite from '../../img/icons.svg';
 import Logo from 'components/Logo/Logo';
 import { NavLink } from 'react-router';
+
 const Header = () => {
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <Logo />
       <nav>
         <ul className={styles.menu}>
@@ -18,12 +19,12 @@ const Header = () => {
                   <use href={`${sprite}#icon-cart`}></use>
                 </svg>
               </span>
-              Cart (3)
+              <span className={styles.counter}> Cart (3)</span>
             </NavLink>
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 };
 export default Header;

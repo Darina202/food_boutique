@@ -3,31 +3,42 @@
     Quincy CF,
     sans-serif;
   font-weight: 900;
-  font-size: 24px;
-  line-height: 100%;
+  /* font-size: 24px;
+  line-height: 100%; */
   letter-spacing: -0.02em;
   color: var(--black);
   display: flex;
   gap: 8px;
   align-items: center;
-}
 
-.footer {
-  color: var(--grey);
+  font-size: 18px;
+  line-height: 111%;
 }
 
 .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
+  /* width: 32px;
+  height: 32px; */
   background: var(--green);
   border-radius: 50%;
   fill: var(--grey);
+  & svg {
+    width: 16px;
+    height: 16px;
+  }
+  /*  & svg {
+    width: 20px;
+    height: 20px; } */
 }
 
-.footer .icon {
-  fill: var(--green);
-  background: var(--grey);
+.footer {
+  color: var(--grey);
+  & .icon {
+    fill: var(--green);
+    background: var(--grey);
+  }
 }

@@ -2,33 +2,44 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0 77px;
-  margin: 0 auto;
-  max-width: 1240px;
+  padding-bottom: 77px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  /* gap: 24px; */
+  gap: 6px;
 }
 
 .btn {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 133%;
-  color: #e8e8e2;
-  border-radius: 30px;
-  padding: 12px 28px;
+  /* font-size: 18px;
+  line-height: 133%; */
+  /* padding: 12px 28px;
   width: 104px;
-  height: 48px;
+  height: 48px; */
   background: var(--green);
   cursor: pointer;
+  color: var(--grey);
+  border-radius: 30px;
+
+  font-size: 14px;
+  line-height: 129%;
+  padding: 10px 20px;
+  width: 77px;
+  height: 38px;
 }
 
 .cart {
-  font-weight: 500;
+  /* font-weight: 500;
   font-size: 18px;
   line-height: 133%;
   text-transform: uppercase;
   color: var(--black);
   display: flex;
   gap: 14px;
-  align-items: center;
+  align-items: center; */
 }
 
 .icon {
@@ -40,10 +51,20 @@
   height: 38px;
   background: var(--green);
   fill: var(--grey);
+  & svg {
+    width: 14px;
+    height: 14px;
+  }
 }
 
-.menu {
+.counter {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  text-transform: uppercase;
+  color: var(--black);
   display: flex;
+  gap: 14px;
   align-items: center;
-  gap: 24px;
+  display: none;
 }

@@ -7,7 +7,7 @@ const Logo = ({ colorClass }) => {
     <>
       <Link className={`${styles.logo} ${styles[colorClass]}`} to="./">
         <span className={styles.icon}>
-          <svg width="20" height="20">
+          <svg>
             <use href={`${sprite}#icon-logo`}></use>
           </svg>
         </span>

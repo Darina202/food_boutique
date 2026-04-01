@@ -5,7 +5,7 @@ import EmailForm from './EmailForm/EmailForm';
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.right}>
@@ -26,7 +26,7 @@ const Footer = () => {
           <p>Privacy Policy / Terms of Service</p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 export default Footer;

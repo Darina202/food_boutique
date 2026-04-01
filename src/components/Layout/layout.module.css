@@ -1,4 +1,9 @@
 .container {
-  /* padding: 24px 20px 20px; */
-  /* margin: 0 auto; */
+  padding-top: 18px;
+  max-width: 335px;
+
+  /* padding-top: 24px;
+  max-width: 1240px; */
+  width: 100%;
+  margin: 0 auto;
 }
