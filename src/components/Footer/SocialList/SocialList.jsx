@@ -7,21 +7,21 @@ const SocialList = () => {
     <ul className={styles.socialList}>
       <li className={styles.social}>
         <Link to="https://www.facebook.com">
-          <svg className={styles.style} width="28" height="28">
+          <svg className={styles.style}>
             <use href={`${sprite}#icon-facebook`} />
           </svg>
         </Link>
       </li>
       <li className={styles.social}>
         <Link to="https://www.instagram.com/">
-          <svg className={styles.style} width="28" height="28">
+          <svg className={styles.style}>
             <use href={`${sprite}#icon-instagram`} />
           </svg>
         </Link>
       </li>
       <li className={styles.social}>
         <Link to="https://www.youtube.com/">
-          <svg className={styles.style} width="28" height="28">
+          <svg className={styles.style}>
             <use href={`${sprite}#icon-youtube`} />
           </svg>
         </Link>

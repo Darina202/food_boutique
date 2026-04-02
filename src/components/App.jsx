@@ -1,4 +1,3 @@
-import Hero from './Hero/Hero';
 import Layout from './Layout/Layout';
 
 const App = () => {

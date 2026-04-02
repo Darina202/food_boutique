@@ -8,11 +8,24 @@
   border: 1px solid rgba(232, 232, 226, 0.3);
   border-radius: 10px;
   padding: 8px;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
 }
 
 .style {
   fill: var(--grey);
   opacity: 0.8;
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .social {
+    width: 44px;
+    height: 44px;
+  }
+  .style {
+    width: 28px;
+    height: 28px;
+  }
 }

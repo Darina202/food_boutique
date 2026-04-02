@@ -1,17 +1,17 @@
 import Hero from 'components/Hero/Hero';
-import styles from './layout.module.css';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
+import style from '../container.module.css';
 
 const Layout = ({ children }) => {
   return (
     <>
-      <div className={styles.container}>
+      <div className={style.container}>
         <Header />
-        {/* <Hero /> */}
+        <Hero />
         {/* {children} */}
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
