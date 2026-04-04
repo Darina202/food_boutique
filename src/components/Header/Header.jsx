@@ -15,7 +15,7 @@ const Header = () => {
           <li>
             <NavLink className={styles.cart} to="/cart">
               <span className={styles.icon}>
-                <svg width="18" height="18">
+                <svg>
                   <use href={`${sprite}#icon-cart`}></use>
                 </svg>
               </span>
