@@ -4,21 +4,21 @@ import emptyCart from '../../../img/cart/empty-mobile.png';
 
 const EmptyCart = () => {
   return (
-    <div>
+    <div className={styles.empty}>
       <div className={styles.cartIcon}>
         <span className={styles.icon}>
           <svg>
             <use href={`${sprite}#icon-cart`}></use>
           </svg>
         </span>
-        <p className={styles.counter}> Cart (3)</p>
+        <p className={styles.counter}> Cart (0)</p>
       </div>
-      <div className={styles.empty}>
+      <div className={styles.description}>
         <img className={styles.img} src={emptyCart} alt="Empty cart pic" />
-        <h4>
+        <h4 className={styles.title}>
           Your basket is <span> empty...</span>
         </h4>
-        <p>Go to the main page to select your favorite products and add them to the cart.</p>
+        <p className={styles.text}>Go to the main page to select your favorite products and add them to the cart.</p>
       </div>
     </div>
   );
