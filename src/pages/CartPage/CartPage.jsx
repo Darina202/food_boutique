@@ -1,4 +1,4 @@
-import EmptyCart from 'components/Cart/EmptyCart/EmptyCart';
+import EmptyCart from '../../components/Cart/EmptyCart/EmptyCart';
 
 const CartPage = () => {
   return (

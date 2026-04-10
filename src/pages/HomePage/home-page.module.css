@@ -1,0 +1,15 @@
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1440px) {
+  .products {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .aside {
+    flex-basis: 275px;
+  }
+}

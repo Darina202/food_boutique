@@ -1,0 +1,86 @@
+.card {
+  padding: 16px;
+  border-radius: 15px;
+  background: var(--white);
+  position: relative;
+}
+
+.picture {
+  padding: 18px 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--grey);
+  margin-bottom: 16px;
+  & img {
+    width: 114x;
+    height: 114px;
+  }
+}
+
+.discountIcon {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 3px;
+  right: 10px;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title,
+.price {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.11;
+}
+
+.price {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  width: 34px;
+  height: 34px;
+  background: var(--green);
+  fill: var(--grey);
+  & svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title,
+  .price {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .card {
+    width: 336px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .picture {
+    padding: 23px 0;
+    & img {
+      width: 105x;
+      height: 105px;
+    }
+  }
+  .card {
+    width: 275px;
+  }
+}

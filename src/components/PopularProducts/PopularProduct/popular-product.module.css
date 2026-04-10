@@ -1,0 +1,61 @@
+.card {
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--white);
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.picture {
+  padding: 9px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--grey);
+  & img {
+    width: 56x;
+    height: 56px;
+  }
+}
+
+.description {
+  max-width: 152px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.11;
+  margin-bottom: 12px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  fill: var(--green);
+  background: var(--grey);
+  & svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 275px;
+  }
+  .titlePrice {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
