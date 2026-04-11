@@ -1,0 +1,113 @@
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('../../img/chevron-down.png');
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+}
+
+.productsFilter {
+  padding-bottom: 40px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  color: rgba(1, 1, 1, 0.3);
+  margin-bottom: 8px;
+}
+
+.list {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.form {
+  position: relative;
+}
+
+.inputName,
+.categories,
+.filtering {
+  border: 1px solid rgba(1, 1, 1, 0.3);
+  border-radius: 30px;
+  padding: 14px 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  font-family: inherit;
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  height: auto;
+}
+
+.input {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 14px 20px;
+  border-radius: 30px;
+  outline: none;
+  border: 1px solid rgba(1, 1, 1, 0.3);
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 1.29;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.inputName {
+  color: var(--black);
+}
+
+.icon {
+  position: absolute;
+  top: 55%;
+  right: 20px;
+  transform: translateY(-50%);
+
+  & svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.filtering {
+  background-color: var(--white);
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .list {
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+  }
+  .inputName,
+  .categories,
+  .filtering {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  .item {
+    width: 189px;
+  }
+  .item:first-child {
+    width: 269px;
+  }
+  .item:last-child {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .productsFilter {
+    padding-bottom: 60px;
+  }
+}
