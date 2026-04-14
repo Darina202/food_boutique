@@ -2,15 +2,15 @@ import CharacteristicList from '../../../components/CharacteristicList/Character
 import styles from './popular-product.module.css';
 import sprite from '../../../img/icons.svg';
 
-const PopularProduct = () => {
+const PopularProduct = ({ id, name, img, category, size, popularity }) => {
   return (
-    <li className={styles.card}>
+    <li key={id} className={styles.card}>
       <picture className={styles.picture}>
-        <img src="https://ftp.goit.study/img/so-yummy/ingredients/640c2dd963a319ea671e385e.png" alt="" />
+        <img src={img} alt={name} />
       </picture>
       <div className={styles.description}>
-        <h4 className={styles.title}>Ackee</h4>
-        <CharacteristicList />
+        <h4 className={styles.title}>{name}</h4>
+        <CharacteristicList category={category} size={size} popularity={popularity} />
       </div>
       <button className={styles.icon}>
         <svg>

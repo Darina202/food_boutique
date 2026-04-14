@@ -1,21 +1,21 @@
 import styles from './characteristic-list.module.css';
 
-const CharacteristicList = () => {
+const CharacteristicList = ({ category, size, popularity }) => {
   return (
     <ul className={styles.list}>
       <li>
         <p className={styles.characteristic}>
-          Category: <span>Fresh Produce</span>
+          Category: <span>{category}</span>
         </p>
       </li>
       <li>
         <p className={styles.characteristic}>
-          Size: <span>Each</span>
+          Size: <span>{size}</span>
         </p>
       </li>
       <li>
         <p className={styles.characteristic}>
-          Popularity: <span>0</span>
+          Popularity: <span>{popularity}</span>
         </p>
       </li>
     </ul>
