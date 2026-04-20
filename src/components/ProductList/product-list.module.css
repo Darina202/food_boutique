@@ -33,6 +33,12 @@
   color: rgba(1, 1, 1, 0.7);
 }
 
+.pages {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+}
+
 @media screen and (min-width: 375px) {
   .nothing {
     padding: 100px 28px 180px;
@@ -58,6 +64,9 @@
     font-size: 18px;
     line-height: 1.33;
   }
+  .pages {
+    padding-bottom: 100px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -69,5 +78,8 @@
   }
   .nothing {
     padding-top: 140px;
+  }
+  .pages {
+    padding-bottom: 60px;
   }
 }

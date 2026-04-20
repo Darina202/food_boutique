@@ -2,7 +2,8 @@ import CharacteristicList from '../../../components/CharacteristicList/Character
 import styles from './popular-product.module.css';
 import sprite from '../../../img/icons.svg';
 
-const PopularProduct = ({ id, name, img, category, size, popularity }) => {
+const PopularProduct = ({ product }) => {
+  const { _id, name, img, category, size, popularity } = product;
   return (
     <li className={styles.card}>
       <picture className={styles.picture}>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const useResponsiveLimit = () => {
-  const [limit, setLimit] = useState(() => (window.innerWidth >= 1024 ? 9 : 6));
+  const [limit, setLimit] = useState(() => (window.innerWidth >= 1440 ? 9 : 6));
 
   useEffect(() => {
     const media = window.matchMedia('(min-width: 1439px)');
