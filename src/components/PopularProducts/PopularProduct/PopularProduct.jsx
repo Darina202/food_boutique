@@ -4,7 +4,7 @@ import sprite from '../../../img/icons.svg';
 
 const PopularProduct = ({ id, name, img, category, size, popularity }) => {
   return (
-    <li key={id} className={styles.card}>
+    <li className={styles.card}>
       <picture className={styles.picture}>
         <img src={img} alt={name} />
       </picture>

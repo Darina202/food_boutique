@@ -4,14 +4,14 @@ import CharacteristicList from '../../components/CharacteristicList/Characterist
 
 const Product = ({ id, name, img, category, price, size, popularity }) => {
   return (
-    <li key={id} className={styles.card}>
+    <li className={styles.card}>
       <picture className={styles.picture}>
         <img src={img} alt={name} />
       </picture>
       <h4 className={styles.title}>{name}</h4>
       <CharacteristicList category={category} size={size} popularity={popularity} />
       <div className={styles.bottom}>
-        <p className={styles.price}>{price}</p>
+        <p className={styles.price}>${price.toFixed(2)}</p>
         <button className={styles.icon}>
           <svg>
             <use href={`${sprite}#icon-cart`}></use>

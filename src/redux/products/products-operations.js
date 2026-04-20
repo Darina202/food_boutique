@@ -1,21 +1,11 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getAllProducts, getPopularProducts } from '../../api/products-api';
+import { getAllProducts } from '../../api/products-api';
 
-export const fetchAllProducts = createAsyncThunk('products/fetchAllProducts', async (_, thunkAPI) => {
+export const fetchAllProducts = createAsyncThunk('products/fetchAllProducts', async ({ page, limit }, thunkAPI) => {
   try {
-    const data = await getAllProducts();
-    return data.results;
-  } catch (error) {
-    console.log(error);
-    return thunkAPI.rejectWithValue(error.message);
-  }
-});
-
-export const fetchPopularProducts = createAsyncThunk('products/fetchPopularProducts', async (_, thunkAPI) => {
-  try {
-    const data = await getPopularProducts();
+    const data = await getAllProducts(page, limit);
+    // return data.results;
     return data;
-    console.log(data);
   } catch (error) {
     console.log(error);
     return thunkAPI.rejectWithValue(error.message);

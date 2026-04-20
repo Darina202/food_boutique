@@ -3,6 +3,7 @@ import { fetchAllProducts } from './products-operations';
 
 const initialState = {
   items: [],
+  totalPages: 2,
   isLoading: false,
   error: null,
 };
@@ -25,21 +26,10 @@ const productSlice = createSlice({
       .addCase(fetchAllProducts.pending, handlePending)
       .addCase(fetchAllProducts.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.items = payload;
+        state.items = payload.results;
+        state.totalPages = payload.totalPages;
       })
       .addCase(fetchAllProducts.rejected, handleRejected);
-    //   .addCase(addContact.pending, handlePending)
-    //   .addCase(addContact.fulfilled, (state, { payload }) => {
-    //     state.isLoading = false;
-    //     state.items = [...state.items, payload];
-    //   })
-    //   .addCase(addContact.rejected, handleRejected)
-    //   .addCase(deleteContact.pending, handlePending)
-    //   .addCase(deleteContact.fulfilled, (state, { payload }) => {
-    //     state.isLoading = false;
-    //     state.items = state.items.filter(item => item.id !== payload);
-    //   })
-    //   .addCase(deleteContact.rejected, handleRejected);
   },
 });
 
