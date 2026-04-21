@@ -25,7 +25,7 @@ import { filterReducer } from './filters/filters-slice';
 
 const rootReducer = combineReducers({
   products: productReducer,
-  //   filter: filterReducer,
+  filter: filterReducer,
 });
 
 export default rootReducer;

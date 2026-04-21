@@ -12,7 +12,7 @@ const DiscountProductsList = () => {
   // const query = searchParams.get('query');
 
   useEffect(() => {
-    const fetchMovies = async () => {
+    const fetchDiscountProducts = async () => {
       try {
         setLoading(true);
         const data = await getDiscountProducts();
@@ -23,7 +23,7 @@ const DiscountProductsList = () => {
         setLoading(false);
       }
     };
-    fetchMovies();
+    fetchDiscountProducts();
   }, []);
 
   const elements = items

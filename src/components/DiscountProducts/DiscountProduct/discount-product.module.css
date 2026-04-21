@@ -74,7 +74,7 @@
 
 @media screen and (min-width: 1440px) {
   .picture {
-    padding: 23px 0;
+    padding: 23px 0 22px;
     & img {
       width: 105x;
       height: 105px;
