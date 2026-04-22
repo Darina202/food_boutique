@@ -7,23 +7,23 @@ import { selectAllProducts } from '../../redux/products/products-selectors';
 import EmptyProductList from './EmptyProductList';
 import useResponsiveLimit from '../../helpers/useResponsiveLimit';
 import Pagination from '../../components/Pagination/Pagination';
-import { selectFilteredProducts } from '../../redux/filters/filters-selectors';
+import { selectFilteredProperties } from '../../redux/filters/filters-selectors';
 
 const ProductList = () => {
   const { items, isLoading, error, totalPages } = useSelector(selectAllProducts);
-  const { category, keyword } = useSelector(selectFilteredProducts);
+  const { category, keyword, byABC, byPrice, byPopularity } = useSelector(selectFilteredProperties);
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
   const limit = useResponsiveLimit();
 
   useEffect(() => {
     setPage(1);
-  }, [category]);
+  }, [category, keyword, byABC, byPrice, byPopularity]);
 
   useEffect(() => {
     if (!limit) return;
-    dispatch(fetchAllProducts({ page, limit, keyword, category }));
-  }, [dispatch, page, limit, category, keyword]);
+    dispatch(fetchAllProducts({ page, limit, keyword, category, byABC, byPrice, byPopularity }));
+  }, [dispatch, page, limit, category, keyword, byABC, byPrice, byPopularity]);
 
   const elements = items?.map(item => <Product key={item._id} product={item} />);
 
@@ -33,7 +33,9 @@ const ProductList = () => {
       {error && <p>{error}</p>}
 
       {Boolean(items?.length > 0) ? <ul className={styles.list}>{elements}</ul> : <EmptyProductList />}
-      {Boolean(totalPages > 1) && <Pagination totalPages={totalPages} handlePageClick={newPage => setPage(newPage)} />}
+      {Boolean(totalPages > 1) && (
+        <Pagination totalPages={totalPages} currentPage={page} handlePageClick={newPage => setPage(newPage)} />
+      )}
     </div>
   );
 };

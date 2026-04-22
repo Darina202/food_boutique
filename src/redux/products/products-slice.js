@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchAllProducts, fetchProductsByCategory } from './products-operations';
+import { fetchAllProducts } from './products-operations';
 
 const initialState = {
   items: [],
@@ -32,14 +32,6 @@ const productSlice = createSlice({
         state.page = payload.page;
       })
       .addCase(fetchAllProducts.rejected, handleRejected);
-    // .addCase(fetchProductsByCategory.pending, handlePending)
-    // .addCase(fetchProductsByCategory.fulfilled, (state, { payload }) => {
-    //   state.isLoading = false;
-    //   state.items = payload.results;
-    //   state.totalPages = payload.totalPages;
-    //   state.page = payload.page;
-    // })
-    // .addCase(fetchProductsByCategory.rejected, handleRejected);
   },
 });
 

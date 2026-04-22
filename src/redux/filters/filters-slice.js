@@ -2,9 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   category: '',
   keyword: '',
-  byABC: '',
-  byPrice: '',
-  byPopularity: '',
+  byABC: null,
+  byPrice: null,
+  byPopularity: null,
 };
 
 const filterSlice = createSlice({
@@ -17,18 +17,18 @@ const filterSlice = createSlice({
     changeKeyword: (state, { payload }) => {
       state.keyword = payload;
     },
-    changeAlphabet: (state, { payload }) => {
-      state.byABC = payload;
-    },
-    changePrice: (state, { payload }) => {
-      state.byPrice = payload;
-    },
-    changePopularity: (state, { payload }) => {
-      state.byPopularity = payload;
+    setSort: (state, { payload }) => {
+      state.byABC = null;
+      state.byPrice = null;
+      state.byPopularity = null;
+
+      if (payload.type === 'abc') state.byABC = payload.value;
+      if (payload.type === 'price') state.byPrice = payload.value;
+      if (payload.type === 'popularity') state.byPopularity = payload.value;
     },
   },
 });
 
-export const { changeCategory, changeKeyword, changeAlphabet, changePrice, changePopularity } = filterSlice.actions;
+export const { changeCategory, changeKeyword, setSort } = filterSlice.actions;
 
 export const filterReducer = filterSlice.reducer;

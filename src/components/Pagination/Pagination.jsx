@@ -2,7 +2,7 @@ import ReactPaginate from 'react-paginate';
 import styles from './pagination.module.css';
 import sprite from '../../img/icons.svg';
 
-const Pagination = ({ handlePageClick, totalPages }) => {
+const Pagination = ({ handlePageClick, totalPages, currentPage }) => {
   return (
     <ReactPaginate
       breakLabel="..."
@@ -22,6 +22,7 @@ const Pagination = ({ handlePageClick, totalPages }) => {
       containerClassName={styles.paginationList}
       activeClassName={styles.active}
       renderOnZeroPageCount={null}
+      forcePage={currentPage - 1}
       onPageChange={event => handlePageClick(event.selected + 1)}
     />
   );

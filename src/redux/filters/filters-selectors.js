@@ -1,1 +1,1 @@
-export const selectFilteredProducts = store => store.filter;
+export const selectFilteredProperties = store => store.filter;
