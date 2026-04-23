@@ -7,6 +7,7 @@
     0 208px 286px 0 rgba(0, 0, 0, 0.07);
   border-radius: 20px;
   background: var(--white);
+  position: relative;
 }
 
 .picture {
@@ -23,6 +24,14 @@
   }
 }
 
+.discountIcon {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 3px;
+  right: 10px;
+}
+
 .title {
   margin-bottom: 10px;
 }
@@ -32,21 +41,6 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 1.11;
-}
-
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-  width: 34px;
-  height: 34px;
-  background: var(--green);
-  fill: var(--grey);
-  & svg {
-    width: 18px;
-    height: 18px;
-  }
 }
 
 .bottom {

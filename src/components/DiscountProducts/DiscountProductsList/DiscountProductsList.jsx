@@ -2,14 +2,13 @@ import styles from './discount-products-list.module.css';
 import DiscountProduct from '../DiscountProduct/DiscountProduct';
 import { useEffect, useState } from 'react';
 import { getDiscountProducts } from '../../../api/products-api';
+import useCartBtn from '../../../helpers/useCartBtn';
 
 const DiscountProductsList = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  // const [searchParams, setSearchParams] = useSearchParams();
-  // const query = searchParams.get('query');
+  const { handleClick } = useCartBtn();
 
   useEffect(() => {
     const fetchDiscountProducts = async () => {
@@ -28,7 +27,7 @@ const DiscountProductsList = () => {
 
   const elements = items
     ?.slice(0, 2)
-    .map(({ _id, name, img, price }) => <DiscountProduct key={_id} id={_id} name={name} img={img} price={price} />);
+    .map(item => <DiscountProduct key={item._id} product={item} onClick={() => handleClick(item)} />);
 
   return (
     <>

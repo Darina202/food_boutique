@@ -2,14 +2,13 @@ import PopularProduct from '../PopularProduct/PopularProduct';
 import styles from './popular-products-list.module.css';
 import { useEffect, useState } from 'react';
 import { getPopularProducts } from '../../../api/products-api';
+import useCartBtn from '../../../helpers/useCartBtn';
 
 const PopularProductsList = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  // const [searchParams, setSearchParams] = useSearchParams();
-  // const query = searchParams.get('query');
+  const { handleClick } = useCartBtn();
 
   useEffect(() => {
     const fetchPopularProducts = async () => {
@@ -26,7 +25,9 @@ const PopularProductsList = () => {
     fetchPopularProducts();
   }, []);
 
-  const elements = items?.map(item => <PopularProduct key={item._id} product={item} />);
+  const elements = items?.map(item => (
+    <PopularProduct key={item._id} product={item} onClick={() => handleClick(item)} />
+  ));
 
   return (
     <>

@@ -1,6 +1,7 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import { productReducer } from './products/products-slice';
 import { filterReducer } from './filters/filters-slice';
+import { cartReducer } from './cart/cart-slice';
 
 // import { persistReducer } from 'redux-persist';
 // import storage from 'redux-persist/lib/storage';
@@ -26,6 +27,7 @@ import { filterReducer } from './filters/filters-slice';
 const rootReducer = combineReducers({
   products: productReducer,
   filter: filterReducer,
+  cart: cartReducer,
 });
 
 export default rootReducer;

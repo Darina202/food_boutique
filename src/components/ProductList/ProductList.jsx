@@ -8,6 +8,7 @@ import EmptyProductList from './EmptyProductList';
 import useResponsiveLimit from '../../helpers/useResponsiveLimit';
 import Pagination from '../../components/Pagination/Pagination';
 import { selectFilteredProperties } from '../../redux/filters/filters-selectors';
+import useCartBtn from '../../helpers/useCartBtn';
 
 const ProductList = () => {
   const { items, isLoading, error, totalPages } = useSelector(selectAllProducts);
@@ -15,6 +16,7 @@ const ProductList = () => {
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
   const limit = useResponsiveLimit();
+  const { handleClick } = useCartBtn();
 
   useEffect(() => {
     setPage(1);
@@ -25,7 +27,7 @@ const ProductList = () => {
     dispatch(fetchAllProducts({ page, limit, keyword, category, byABC, byPrice, byPopularity }));
   }, [dispatch, page, limit, category, keyword, byABC, byPrice, byPopularity]);
 
-  const elements = items?.map(item => <Product key={item._id} product={item} />);
+  const elements = items?.map(item => <Product key={item._id} product={item} onClick={() => handleClick(item)} />);
 
   return (
     <div className={styles.pages}>

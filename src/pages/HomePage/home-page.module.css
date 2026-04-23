@@ -8,6 +8,8 @@
   .products {
     flex-direction: row;
     align-items: flex-start;
+    padding-bottom: 60px;
+    gap: 40px;
   }
   .aside {
     flex-basis: 275px;

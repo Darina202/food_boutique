@@ -1,8 +1,8 @@
-import CharacteristicList from '../../../components/CharacteristicList/CharacteristicList';
+import CharacteristicList from '../../CharacteristicList/CharacteristicList';
 import styles from './popular-product.module.css';
-import sprite from '../../../img/icons.svg';
+import CartButton from '../../CartButton/CartButton';
 
-const PopularProduct = ({ product }) => {
+const PopularProduct = ({ product, onClick }) => {
   const { _id, name, img, category, size, popularity } = product;
   return (
     <li className={styles.card}>
@@ -13,11 +13,7 @@ const PopularProduct = ({ product }) => {
         <h4 className={styles.title}>{name}</h4>
         <CharacteristicList category={category} size={size} popularity={popularity} />
       </div>
-      <button className={styles.icon}>
-        <svg>
-          <use href={`${sprite}#icon-cart`}></use>
-        </svg>
-      </button>
+      <CartButton id={_id} colorClass="popular" onClick={onClick} />
     </li>
   );
 };

@@ -1,0 +1,59 @@
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  width: 34px;
+  height: 34px;
+  background-color: var(--green);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  & svg {
+    width: 18px;
+    height: 18px;
+  }
+  & .iconCheck {
+    stroke: var(--grey);
+    fill: none;
+  }
+  & .iconCart {
+    fill: var(--grey);
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--dark-green);
+  }
+}
+
+.popular {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--grey);
+  transition:
+    background-color,
+    fill,
+    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  & svg {
+    width: 12px;
+    height: 12px;
+  }
+  & .iconCheck {
+    stroke: var(--green);
+    fill: none;
+  }
+  & .iconCart {
+    fill: var(--green);
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--green);
+    & .iconCheck {
+      stroke: var(--grey);
+    }
+    & .iconCart {
+      fill: var(--grey);
+    }
+  }
+}

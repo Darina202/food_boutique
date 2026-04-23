@@ -1,7 +1,10 @@
 import styles from './discount-product.module.css';
 import sprite from '../../../img/icons.svg';
+import CartButton from '../../CartButton/CartButton';
 
-const DiscountProduct = ({ id, name, img, price }) => {
+const DiscountProduct = ({ product, onClick }) => {
+  const { _id, name, img, price } = product;
+
   return (
     <li className={styles.card}>
       <picture className={styles.picture}>
@@ -14,11 +17,7 @@ const DiscountProduct = ({ id, name, img, price }) => {
         <h4 className={styles.title}>{name}</h4>
         <div className={styles.price}>
           <p>${price}</p>
-          <button className={styles.icon}>
-            <svg>
-              <use href={`${sprite}#icon-cart`}></use>
-            </svg>
-          </button>
+          <CartButton id={_id} onClick={onClick} />
         </div>
       </div>
     </li>
