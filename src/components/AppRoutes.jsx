@@ -4,7 +4,7 @@ import HomePage from 'pages/HomePage/HomePage';
 import CartPage from 'pages/CartPage/CartPage';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
 
-const App = () => {
+const AppRoutes = () => {
   return (
     <>
       <Layout>
@@ -17,4 +17,4 @@ const App = () => {
     </>
   );
 };
-export default App;
+export default AppRoutes;

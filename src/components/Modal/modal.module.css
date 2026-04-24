@@ -1,0 +1,56 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  background: var(--grey);
+  padding: 40px 20px;
+  border: none;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); */
+  border-radius: 20px;
+  /* max-height: 720px; */
+  width: 335px;
+  max-width: 335px;
+
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(1, 1, 1, 0.4);
+  border: none;
+  z-index: 999;
+}
+
+.closeBtn {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.closeIcon {
+  width: 12px;
+  height: 12px;
+  fill: var(--black);
+}
+
+.newSubscriber {
+  padding: 100px 43px 166px 44px;
+  background-image: url(../../img/footer/subscription.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+}
+
+.existSubscriber {
+  padding: 80px 43px 80px 44px;
+}
