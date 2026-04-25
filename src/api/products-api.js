@@ -28,7 +28,6 @@ export const getCategoriesList = async () => {
 
 export const getProductById = async id => {
   const { data } = await instance.get(`/products/${id}`);
-  console.log(data);
   return data;
 };
 

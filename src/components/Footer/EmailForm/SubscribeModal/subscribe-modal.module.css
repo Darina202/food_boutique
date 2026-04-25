@@ -1,0 +1,30 @@
+.modalTitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 245px;
+  margin-bottom: 14px;
+  & span {
+    color: var(--green);
+  }
+}
+
+.modalText {
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  color: rgba(1, 1, 1, 0.7);
+}
+
+@media screen and (min-width: 768px) {
+  .modalTitle {
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  .modalText {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}

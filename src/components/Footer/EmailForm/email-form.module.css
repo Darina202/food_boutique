@@ -36,35 +36,6 @@
   margin-top: 14px;
 }
 
-.modalTitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  text-align: center;
-  margin-bottom: 14px;
-  & span {
-    color: var(--green);
-  }
-}
-
-.modalText {
-  font-size: 14px;
-  line-height: 1.29;
-  text-align: center;
-  color: rgba(1, 1, 1, 0.7);
-}
-
-.modalNewSub {
-  /* padding: 100px 43px 166px 44px; */
-  /* background-image: url(../../../img/footer/subscription.png);
-  background-repeat: no-repeat;
-  background-position: bottom; */
-}
-
-.modalExistSub {
-  padding: 80px 43px 80px 44px;
-}
-
 @media screen and (min-width: 768px) {
   .left {
     max-width: 336px;

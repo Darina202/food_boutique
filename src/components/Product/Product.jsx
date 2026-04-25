@@ -3,11 +3,11 @@ import sprite from '../../img/icons.svg';
 import CharacteristicList from '../../components/CharacteristicList/CharacteristicList';
 import CartButton from 'components/CartButton/CartButton';
 
-const Product = ({ product, onClick }) => {
+const Product = ({ product, onClick, openModal }) => {
   const { _id, name, img, category, price, size, popularity, is10PercentOff } = product;
 
   return (
-    <li className={styles.card}>
+    <li className={styles.card} onClick={openModal}>
       <picture className={styles.picture}>
         <img src={img} alt={name} />
         {is10PercentOff && (

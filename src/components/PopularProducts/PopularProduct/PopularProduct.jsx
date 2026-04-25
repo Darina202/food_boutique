@@ -2,10 +2,10 @@ import CharacteristicList from '../../CharacteristicList/CharacteristicList';
 import styles from './popular-product.module.css';
 import CartButton from '../../CartButton/CartButton';
 
-const PopularProduct = ({ product, onClick }) => {
+const PopularProduct = ({ product, onClick, openModal }) => {
   const { _id, name, img, category, size, popularity } = product;
   return (
-    <li className={styles.card}>
+    <li className={styles.card} onClick={openModal}>
       <picture className={styles.picture}>
         <img src={img} alt={name} />
       </picture>

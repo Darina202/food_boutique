@@ -3,12 +3,15 @@ import styles from './popular-products-list.module.css';
 import { useEffect, useState } from 'react';
 import { getPopularProducts } from '../../../api/products-api';
 import useCartBtn from '../../../helpers/useCartBtn';
+import useModal from '../../../helpers/useModal';
+import ProductModal from '../../ProductModal/ProductModal';
 
 const PopularProductsList = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const { handleClick } = useCartBtn();
+  const { isOpen, data: selectedProductId, openModal, closeModal } = useModal();
 
   useEffect(() => {
     const fetchPopularProducts = async () => {
@@ -26,7 +29,14 @@ const PopularProductsList = () => {
   }, []);
 
   const elements = items?.map(item => (
-    <PopularProduct key={item._id} product={item} onClick={() => handleClick(item)} />
+    <PopularProduct
+      key={item._id}
+      product={item}
+      openModal={() => {
+        openModal(item._id);
+      }}
+      onClick={() => handleClick(item)}
+    />
   ));
 
   return (
@@ -37,6 +47,7 @@ const PopularProductsList = () => {
         <h3 className={styles.title}>Popular products</h3>
         <ul className={styles.list}>{elements}</ul>
       </section>
+      <ProductModal selectedProductId={selectedProductId} modalIsOpen={isOpen} setModalIsOpen={closeModal} />
     </>
   );
 };

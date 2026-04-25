@@ -2,11 +2,11 @@ import styles from './discount-product.module.css';
 import sprite from '../../../img/icons.svg';
 import CartButton from '../../CartButton/CartButton';
 
-const DiscountProduct = ({ product, onClick }) => {
+const DiscountProduct = ({ product, onClick, openModal }) => {
   const { _id, name, img, price } = product;
 
   return (
-    <li className={styles.card}>
+    <li className={styles.card} onClick={openModal}>
       <picture className={styles.picture}>
         <img src={img} alt={name} />
         <svg className={styles.discountIcon}>

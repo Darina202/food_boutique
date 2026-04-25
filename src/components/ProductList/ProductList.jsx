@@ -9,6 +9,8 @@ import useResponsiveLimit from '../../helpers/useResponsiveLimit';
 import Pagination from '../../components/Pagination/Pagination';
 import { selectFilteredProperties } from '../../redux/filters/filters-selectors';
 import useCartBtn from '../../helpers/useCartBtn';
+import ProductModal from 'components/ProductModal/ProductModal';
+import useModal from 'helpers/useModal';
 
 const ProductList = () => {
   const { items, isLoading, error, totalPages } = useSelector(selectAllProducts);
@@ -17,6 +19,7 @@ const ProductList = () => {
   const [page, setPage] = useState(1);
   const limit = useResponsiveLimit();
   const { handleClick } = useCartBtn();
+  const { isOpen, data: selectedProductId, openModal, closeModal } = useModal();
 
   useEffect(() => {
     setPage(1);
@@ -27,17 +30,26 @@ const ProductList = () => {
     dispatch(fetchAllProducts({ page, limit, keyword, category, byABC, byPrice, byPopularity }));
   }, [dispatch, page, limit, category, keyword, byABC, byPrice, byPopularity]);
 
-  const elements = items?.map(item => <Product key={item._id} product={item} onClick={() => handleClick(item)} />);
+  const elements = items?.map(item => (
+    <Product
+      key={item._id}
+      product={item}
+      openModal={() => {
+        openModal(item._id);
+      }}
+      onClick={() => handleClick(item)}
+    />
+  ));
 
   return (
     <div className={styles.pages}>
       {isLoading && <p>...Loading</p>}
       {error && <p>{error}</p>}
-
       {Boolean(items?.length > 0) ? <ul className={styles.list}>{elements}</ul> : <EmptyProductList />}
       {Boolean(totalPages > 1) && (
         <Pagination totalPages={totalPages} currentPage={page} handlePageClick={newPage => setPage(newPage)} />
       )}
+      <ProductModal selectedProductId={selectedProductId} modalIsOpen={isOpen} setModalIsOpen={closeModal} />
     </div>
   );
 };

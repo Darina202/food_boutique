@@ -11,9 +11,8 @@
   /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); */
   border-radius: 20px;
   /* max-height: 720px; */
-  width: 335px;
-  max-width: 335px;
-
+  width: 290px;
+  /* max-width: 335px; */
   overflow: hidden;
   overflow-y: auto;
 }
@@ -43,8 +42,14 @@
   fill: var(--black);
 }
 
+.cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .newSubscriber {
-  padding: 100px 43px 166px 44px;
+  padding: 80px 20px 140px 20px;
   background-image: url(../../img/footer/subscription.png);
   background-repeat: no-repeat;
   background-position: bottom;
@@ -52,5 +57,43 @@
 }
 
 .existSubscriber {
-  padding: 80px 43px 80px 44px;
+  padding: 70px 20px 70px 20px;
+}
+
+.productCard {
+  background: var(--white);
+}
+
+@media screen and (min-width: 375px) {
+  .modal {
+    width: 335px;
+  }
+  .newSubscriber {
+    padding: 100px 43px 166px 44px;
+  }
+  .existSubscriber {
+    padding: 80px 43px 80px 44px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 490px;
+  }
+  .modal.productCard {
+    width: 600px;
+  }
+  .productCard .cont {
+    align-items: stretch;
+  }
+  .newSubscriber {
+    padding: 90px 81px 162px 81px;
+    background-image: url(../../img/footer/subscription-tab.png);
+  }
+  .existSubscriber {
+    padding: 100px 60px;
+  }
+  .productCard {
+    padding: 40px;
+  }
 }

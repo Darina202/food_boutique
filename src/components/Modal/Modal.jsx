@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 
-const CustomModal = ({ isOpen, closeModal, customStyles, children }) => {
+const CustomModal = ({ isOpen = false, closeModal, customStyles = '', children }) => {
   return (
     <Modal
       isOpen={isOpen}
@@ -18,7 +18,7 @@ const CustomModal = ({ isOpen, closeModal, customStyles, children }) => {
           <use href={`${sprite}#icon-close`}></use>
         </svg>
       </button>
-      <div>{children}</div>
+      <div className={styles.cont}>{children}</div>
     </Modal>
   );
 };
