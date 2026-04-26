@@ -1,0 +1,147 @@
+.makeOrder {
+  padding-bottom: 80px;
+}
+
+.formTitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.totalAmount {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 18px 18px 14px 18px;
+  background: rgba(109, 132, 52, 0.05);
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.11;
+}
+
+.amount {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  & span {
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(1, 1, 1, 0.2);
+  }
+}
+
+.orderForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inputField {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  background: transparent;
+  border: 1px solid rgba(1, 1, 1, 0.3);
+  border-radius: 30px;
+  padding: 12px 0 12px 20px;
+  color: var(--black);
+  width: 100%;
+  &::before {
+    content: 'Mail:';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+    color: rgba(1, 1, 1, 0.5);
+    margin-right: 8px;
+    white-space: nowrap;
+  }
+}
+
+.formInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+
+  &::placeholder {
+    color: var(--black);
+    opacity: 1;
+  }
+}
+
+.btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--grey);
+  border-radius: 30px;
+  padding: 12px 0;
+  width: 100%;
+  background: var(--green);
+}
+
+@media screen and (min-width: 768px) {
+  .makeOrder {
+    padding-bottom: 100px;
+    width: 590px;
+  }
+
+  .formTitle {
+    font-size: 32px;
+    line-height: 1;
+  }
+  .totalAmount {
+    padding: 14px 28px;
+    margin-bottom: 40px;
+  }
+  .text {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .amount {
+    font-size: 32px;
+    line-height: 1;
+    & span {
+      line-height: 1.17;
+    }
+  }
+  .orderForm {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+  .inputField {
+    padding: 15px 0px 15px 20px;
+    &::before {
+      font-size: 18px;
+      line-height: 1.33;
+    }
+  }
+  .formInput {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  .btn {
+    font-size: 20px;
+    line-height: 1.2;
+    padding: 15px 65px;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .makeOrder {
+    padding-bottom: 0;
+  }
+}

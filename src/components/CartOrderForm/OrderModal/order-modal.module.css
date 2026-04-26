@@ -1,0 +1,48 @@
+.picture {
+  margin-bottom: 40px;
+  position: relative;
+  & div {
+    position: absolute;
+    border-radius: 100%;
+    background: rgba(1, 1, 1, 0.3);
+    filter: blur(20px);
+    width: 145px;
+    height: 28px;
+    bottom: 5px;
+    z-index: -1;
+  }
+}
+
+.img {
+  width: 140px;
+  height: 140px;
+}
+
+.modalTitle {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.11;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.modalText {
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  color: rgba(1, 1, 1, 0.7);
+}
+
+@media screen and (min-width: 768px) {
+  .picture {
+    margin-bottom: 37px;
+  }
+  .modalTitle {
+    font-size: 32px;
+    line-height: 1;
+  }
+  .modalText {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}

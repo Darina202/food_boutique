@@ -1,0 +1,88 @@
+.cartList {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 80px;
+  max-height: 430px;
+  overflow-y: scroll;
+  margin-right: -14px;
+  padding-right: 14px;
+
+  /* Firefox  */
+  /* scrollbar-width: thin;
+  scrollbar-color: rgba(1, 1, 1, 0.08) var(--grey); */
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--grey);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(1, 1, 1, 0.08);
+    border-radius: 20px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(1, 1, 1, 0.2);
+  }
+}
+
+.deleteAllBtn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+  padding-top: 14px;
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  margin: 5px;
+  fill: var(--black);
+}
+
+@media screen and (min-width: 375px) {
+}
+
+@media screen and (min-width: 768px) {
+  .cartList {
+    max-width: 672px;
+  }
+  .list {
+    gap: 40px;
+    margin-bottom: 100px;
+    max-height: 520px;
+    overflow-y: scroll;
+    margin-right: -49px;
+    padding-right: 40px;
+
+    &::-webkit-scrollbar {
+      width: 9px;
+    }
+  }
+
+  .deleteAllBtn {
+    font-size: 16px;
+    line-height: 1.25;
+    padding-top: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .cartList {
+    width: 500px;
+  }
+  .list {
+    margin-bottom: 0;
+  }
+}

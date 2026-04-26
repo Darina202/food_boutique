@@ -6,10 +6,14 @@ import { selectCartProducts } from '../../redux/cart/cart-selectors';
 const CartButton = ({ id, onClick, colorClass, buttonText }) => {
   const { cartItems } = useSelector(selectCartProducts);
   const isItemInCart = cartItems.some(cartItem => cartItem._id === id);
+  const handleBtnClick = e => {
+    e.stopPropagation();
+    onClick();
+  };
 
   return (
-    <button className={`${styles.icon} ${styles[colorClass]}`} onClick={onClick}>
-      {buttonText}
+    <button className={`${styles.icon} ${styles[colorClass]}`} onClick={handleBtnClick}>
+      {buttonText && (isItemInCart ? 'Added' : buttonText)}
       {isItemInCart ? (
         <svg className={styles.iconCheck}>
           <use href={`${sprite}#icon-check`}></use>

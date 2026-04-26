@@ -1,7 +1,7 @@
 import styles from './product.module.css';
 import sprite from '../../img/icons.svg';
-import CharacteristicList from '../../components/CharacteristicList/CharacteristicList';
-import CartButton from 'components/CartButton/CartButton';
+import CharacteristicList from '../CharacteristicList/CharacteristicList';
+import CartButton from '../CartButton/CartButton';
 
 const Product = ({ product, onClick, openModal }) => {
   const { _id, name, img, category, price, size, popularity, is10PercentOff } = product;

@@ -62,8 +62,7 @@ body {
 }
 
 code {
-  font-family:
-    source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 h1,
@@ -127,3 +126,24 @@ input {
     clip: rect(0 0 0 0);
     overflow: hidden;
 } */
+
+::-webkit-scrollbar {
+  width: 10px;
+  z-index: 111;
+}
+
+/* Track styling */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle styling */
+::-webkit-scrollbar-thumb {
+  background: var(--green);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green);
+}

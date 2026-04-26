@@ -1,0 +1,40 @@
+.cartIcon {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  width: 38px;
+  height: 38px;
+  background: var(--green);
+  fill: var(--grey);
+  & svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+.counter {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .icon {
+    width: 42px;
+    height: 42px;
+  }
+  .counter {
+    font-size: 32px;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}

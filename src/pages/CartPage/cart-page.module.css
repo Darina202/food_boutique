@@ -1,0 +1,8 @@
+@media screen and (min-width: 1440px) {
+  .order {
+    display: flex;
+    justify-content: space-between;
+    gap: 101px;
+    padding-bottom: 100px;
+  }
+}

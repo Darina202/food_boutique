@@ -64,6 +64,10 @@
   background: var(--white);
 }
 
+.orderModal {
+  padding: 40px 20px 60px;
+}
+
 @media screen and (min-width: 375px) {
   .modal {
     width: 335px;
@@ -95,5 +99,11 @@
   }
   .productCard {
     padding: 40px;
+  }
+  .orderModal {
+    padding: 80px 40px;
+  }
+  .modal.orderModal {
+    width: 560px;
   }
 }

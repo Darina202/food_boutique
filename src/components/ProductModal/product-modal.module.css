@@ -64,7 +64,12 @@
     font-size: 16px;
     line-height: 1.25;
     max-width: 256px;
-    max-height: 85px;
+    max-height: 120px;
+    overflow-y: auto;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   .price,
   .title {

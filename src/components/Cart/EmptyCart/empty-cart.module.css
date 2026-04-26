@@ -1,38 +1,10 @@
-.cartIcon {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  padding-bottom: 100px;
-}
-
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-  width: 38px;
-  height: 38px;
-  background: var(--green);
-  fill: var(--grey);
-  & svg {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-.counter {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.17;
-  text-transform: uppercase;
-}
-
 .description {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
   padding-bottom: 120px;
+  padding-top: 100px;
 }
 
 .img {
@@ -60,17 +32,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .cartIcon {
-    padding-bottom: 130px;
-  }
-  .icon {
-    width: 42px;
-    height: 42px;
-  }
-  .counter {
-    font-size: 32px;
-    line-height: 1;
-  }
   .title {
     font-size: 20px;
     line-height: 1.2;
@@ -83,13 +44,14 @@
   .img {
     margin-bottom: 40px;
   }
+  .description {
+    padding-top: 130px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-  .cartIcon {
-    padding-bottom: 150px;
-  }
   .description {
     padding-bottom: 150px;
+    padding-top: 150px;
   }
 }
