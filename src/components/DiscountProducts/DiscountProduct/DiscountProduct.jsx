@@ -16,7 +16,7 @@ const DiscountProduct = ({ product, onClick, openModal }) => {
       <div className={styles.description}>
         <h4 className={styles.title}>{name}</h4>
         <div className={styles.price}>
-          <p>${price}</p>
+          <p>${price.toFixed(2)}</p>
           <CartButton id={_id} onClick={onClick} />
         </div>
       </div>

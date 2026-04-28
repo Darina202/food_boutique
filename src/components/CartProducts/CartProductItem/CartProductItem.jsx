@@ -1,8 +1,17 @@
 import styles from './cart-product-item.module.css';
 import sprite from '../../../img/icons.svg';
+import { useDispatch } from 'react-redux';
+import { changeAmount } from '../../../redux/cart/cart-slice';
 
 const CartProductItem = ({ product, deleteProduct }) => {
-  const { _id, name, img, category, size, price } = product;
+  const { _id, name, img, category, size, price, amount = 1 } = product;
+
+  const dispatch = useDispatch();
+
+  const handleUpdateAmount = newAmount => {
+    dispatch(changeAmount({ id: _id, amount: newAmount }));
+  };
+
   return (
     <li className={styles.purchase}>
       <button
@@ -33,7 +42,18 @@ const CartProductItem = ({ product, deleteProduct }) => {
             </p>
           </li>
         </ul>
-        <p className={styles.price}>${price}</p>
+        <div className={styles.amount}>
+          <p className={styles.price}>${price.toFixed(2)}</p>
+          <div className={styles.counter}>
+            <button className={styles.btnDecr} onClick={() => amount > 1 && handleUpdateAmount(amount - 1)}>
+              -
+            </button>
+            <span className={styles.number}>{amount}</span>
+            <button className={styles.btnIncr} onClick={() => handleUpdateAmount(amount + 1)}>
+              +
+            </button>
+          </div>
+        </div>
       </div>
     </li>
   );

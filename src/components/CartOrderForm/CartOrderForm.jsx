@@ -3,21 +3,18 @@ import styles from './order-form.module.css';
 import OrderModal from './OrderModal/OrderModal';
 import { requestOrder } from '../../api/products-api';
 
-const CartOrderForm = () => {
+const CartOrderForm = ({ totalPrice, orderedItems, toDeleteAllProduct }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleSubscribe = async e => {
     e.preventDefault();
-    const form = e.target;
     const email = e.target.elements.email.value;
     try {
-      const data = await requestOrder({ email });
+      const data = await requestOrder({ email, products: orderedItems });
+      setModalIsOpen(true);
       console.log(data.message);
     } catch (error) {
       console.log(error.response.data.message);
-    } finally {
-      form.reset();
-      setModalIsOpen(true);
     }
   };
 
@@ -27,7 +24,7 @@ const CartOrderForm = () => {
       <div className={styles.totalAmount}>
         <p className={styles.text}>Total</p>
         <p className={styles.amount}>
-          <span>Sum: </span>$12,94
+          <span>Sum: </span>${totalPrice?.toFixed(2)}
         </p>
       </div>
       <form className={styles.orderForm} onSubmit={handleSubscribe}>
@@ -39,7 +36,7 @@ const CartOrderForm = () => {
           Checkout
         </button>
       </form>
-      <OrderModal modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
+      <OrderModal modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} toDeleteAllProduct={toDeleteAllProduct} />
     </div>
   );
 };

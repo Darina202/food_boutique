@@ -3,9 +3,16 @@ import styles from './order-modal.module.css';
 import CartModalImage from '../../../img/checkout-image.png';
 import CartModalImage2x from '../../../img/checkout-image2x.png';
 
-const OrderModal = ({ modalIsOpen, setModalIsOpen }) => {
+const OrderModal = ({ modalIsOpen, setModalIsOpen, toDeleteAllProduct }) => {
   return (
-    <CustomModal isOpen={modalIsOpen} customStyles="orderModal" closeModal={() => setModalIsOpen(false)}>
+    <CustomModal
+      isOpen={modalIsOpen}
+      customStyles="orderModal"
+      closeModal={() => {
+        setModalIsOpen(false);
+        toDeleteAllProduct();
+      }}
+    >
       <picture className={styles.picture}>
         <img
           src={CartModalImage}
