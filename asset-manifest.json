@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/food_boutique/static/css/main.aeb01482.css",
-    "main.js": "/food_boutique/static/js/main.2645e930.js",
+    "main.css": "/food_boutique/static/css/main.0a97652f.css",
+    "main.js": "/food_boutique/static/js/main.377494a5.js",
     "static/media/hero-desktop@2x.jpg": "/food_boutique/static/media/hero-desktop@2x.3c8e115e50b5b3030af8.jpg",
     "static/media/hero-tab@2x.jpg": "/food_boutique/static/media/hero-tab@2x.10c29b3bcd8df8c7c2e1.jpg",
     "static/media/QuincyCF-Black.ttf": "/food_boutique/static/media/QuincyCF-Black.8942f0f51051d65f5d5c.ttf",
@@ -27,11 +27,11 @@
     "static/media/empty-mobile.png": "/food_boutique/static/media/empty-mobile.9327f550c38125e70d9c.png",
     "static/media/subscription.png": "/food_boutique/static/media/subscription.482542d9e41c9037b63c.png",
     "index.html": "/food_boutique/index.html",
-    "main.aeb01482.css.map": "/food_boutique/static/css/main.aeb01482.css.map",
-    "main.2645e930.js.map": "/food_boutique/static/js/main.2645e930.js.map"
+    "main.0a97652f.css.map": "/food_boutique/static/css/main.0a97652f.css.map",
+    "main.377494a5.js.map": "/food_boutique/static/js/main.377494a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.aeb01482.css",
-    "static/js/main.2645e930.js"
+    "static/css/main.0a97652f.css",
+    "static/js/main.377494a5.js"
   ]
 }
