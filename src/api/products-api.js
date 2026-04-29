@@ -4,7 +4,15 @@ const instance = axios.create({
   baseURL: 'https://food-boutique.b.goit.study/api',
 });
 
-export const getAllProducts = async (page = 1, limit = 6, keyword, category, byABC, byPrice, byPopularity) => {
+export const getAllProducts = async (
+  page = 1,
+  limit = 6,
+  keyword = null,
+  category = null,
+  byABC,
+  byPrice,
+  byPopularity
+) => {
   const { data } = await instance.get('/products/', {
     params: { page, limit, keyword, category, byABC, byPrice, byPopularity },
   });

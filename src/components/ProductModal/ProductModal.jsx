@@ -5,6 +5,8 @@ import CustomModal from 'components/Modal/Modal';
 import CartButton from 'components/CartButton/CartButton';
 import CharacteristicList from 'components/CharacteristicList/CharacteristicList';
 import useCartBtn from 'helpers/useCartBtn';
+import { useDispatch } from 'react-redux';
+import { deleteProductById } from '../../redux/cart/cart-slice';
 
 const ProductModal = ({ selectedProductId, modalIsOpen, setModalIsOpen }) => {
   const [item, setItem] = useState([]);
@@ -12,7 +14,17 @@ const ProductModal = ({ selectedProductId, modalIsOpen, setModalIsOpen }) => {
   const [error, setError] = useState(null);
 
   const { _id, name, img, category, size, popularity, price, desc } = item;
-  const { handleClick } = useCartBtn();
+  const { handleClick, cartItems } = useCartBtn();
+  const dispatch = useDispatch();
+
+  const addClick = item => {
+    const isItemInCart = cartItems.some(cartItem => cartItem._id === item._id);
+    if (!isItemInCart) {
+      handleClick(item);
+    } else {
+      dispatch(deleteProductById(item._id));
+    }
+  };
 
   useEffect(() => {
     if (!modalIsOpen || !selectedProductId) return;
@@ -52,7 +64,7 @@ const ProductModal = ({ selectedProductId, modalIsOpen, setModalIsOpen }) => {
           </div>
           <div className={styles.bottom}>
             <p className={styles.price}>${price}</p>
-            <CartButton id={_id} colorClass="modal" onClick={() => handleClick(item)} buttonText="Add to" />
+            <CartButton id={_id} colorClass="modal" onClick={() => addClick(item)} buttonText="Add to" />
           </div>
         </div>
       )}

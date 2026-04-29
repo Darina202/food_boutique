@@ -13,7 +13,7 @@ const CartButton = ({ id, onClick, colorClass, buttonText }) => {
 
   return (
     <button className={`${styles.icon} ${styles[colorClass]}`} onClick={handleBtnClick}>
-      {buttonText && (isItemInCart ? 'Added' : buttonText)}
+      {buttonText && (isItemInCart ? 'Remove from' : buttonText)}
       {isItemInCart ? (
         <svg className={styles.iconCheck}>
           <use href={`${sprite}#icon-check`}></use>
