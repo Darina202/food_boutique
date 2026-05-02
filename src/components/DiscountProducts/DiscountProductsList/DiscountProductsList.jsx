@@ -5,6 +5,7 @@ import { getDiscountProducts } from '../../../api/products-api';
 import useCartBtn from '../../../helpers/useCartBtn';
 import useModal from '../../../helpers/useModal';
 import ProductModal from '../../ProductModal/ProductModal';
+import { RingLoader } from 'react-spinners';
 
 const DiscountProductsList = () => {
   const [items, setItems] = useState([]);
@@ -12,7 +13,8 @@ const DiscountProductsList = () => {
   const [error, setError] = useState(null);
   const { handleClick } = useCartBtn();
   const { isOpen, data: selectedProductId, openModal, closeModal } = useModal();
-
+  const loopItems = [...items, ...items];
+  console.log(loopItems);
   useEffect(() => {
     const fetchDiscountProducts = async () => {
       try {
@@ -28,25 +30,34 @@ const DiscountProductsList = () => {
     fetchDiscountProducts();
   }, []);
 
-  const elements = items?.slice(0, 2).map(item => (
+  const elements = loopItems.map(item => (
     <DiscountProduct
       key={item._id}
       product={item}
-      openModal={() => {
-        openModal(item._id);
-      }}
+      openModal={() => openModal(item._id)}
       onClick={() => handleClick(item)}
     />
   ));
 
   return (
     <>
-      {isLoading && <p>...Loading</p>}
       {error && <p>{error}</p>}
-      <section className={styles.discount}>
-        <h3 className={styles.title}>Discount products</h3>
-        <ul className={styles.list}>{elements}</ul>
-      </section>
+      {isLoading ? (
+        <RingLoader
+          color="#586f1f"
+          cssOverride={{
+            display: 'block',
+            margin: '100px auto',
+          }}
+        />
+      ) : (
+        <section className={styles.discount}>
+          <h3 className={styles.title}>Discount products</h3>
+          <div className={styles.wrapper}>
+            <ul className={styles.list}>{elements}</ul>
+          </div>
+        </section>
+      )}
       <ProductModal selectedProductId={selectedProductId} modalIsOpen={isOpen} setModalIsOpen={closeModal} />
     </>
   );

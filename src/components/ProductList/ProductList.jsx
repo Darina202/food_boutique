@@ -11,6 +11,7 @@ import { selectFilteredProperties } from '../../redux/filters/filters-selectors'
 import useCartBtn from '../../helpers/useCartBtn';
 import ProductModal from 'components/ProductModal/ProductModal';
 import useModal from 'helpers/useModal';
+import { RingLoader } from 'react-spinners';
 
 const ProductList = () => {
   const { items, isLoading, error, totalPages } = useSelector(selectAllProducts);
@@ -42,15 +43,27 @@ const ProductList = () => {
   ));
 
   return (
-    <div className={styles.pages}>
-      {isLoading && <p>...Loading</p>}
+    <section className={styles.pages}>
       {error && <p>{error}</p>}
-      {Boolean(items?.length > 0) ? <ul className={styles.list}>{elements}</ul> : <EmptyProductList />}
-      {Boolean(totalPages > 1) && (
-        <Pagination totalPages={totalPages} currentPage={page} handlePageClick={newPage => setPage(newPage)} />
+      {isLoading ? (
+        <RingLoader
+          color="#586f1f"
+          size={100}
+          cssOverride={{
+            display: 'flex',
+            margin: '200px auto',
+          }}
+        />
+      ) : (
+        <>
+          {Boolean(items?.length > 0) ? <ul className={styles.list}>{elements}</ul> : <EmptyProductList />}
+          {Boolean(totalPages > 1) && (
+            <Pagination totalPages={totalPages} currentPage={page} handlePageClick={newPage => setPage(newPage)} />
+          )}
+        </>
       )}
       <ProductModal selectedProductId={selectedProductId} modalIsOpen={isOpen} setModalIsOpen={closeModal} />
-    </div>
+    </section>
   );
 };
 export default ProductList;

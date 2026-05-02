@@ -5,29 +5,122 @@
   margin-bottom: 20px;
 }
 
+.wrapper {
+  height: 485px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 80px;
+
+  &:hover .list,
+  &:focus .list {
+    animation-play-state: paused;
+  }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 40px;
+    z-index: 2;
+  }
+}
+
 .list {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-bottom: 80px;
+  animation: scrollLoop 40s linear infinite;
+  & li {
+    height: 232px;
+  }
 }
 
-@media screen and (min-width: 768px) {
+.wrapper::before {
+  top: 0;
+  background: linear-gradient(to bottom, var(--grey), transparent);
+}
+
+.wrapper::after {
+  bottom: 0;
+  background: linear-gradient(to top, var(--grey), transparent);
+}
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1424px) {
+  .title {
+    font-size: 28px;
+    line-height: 1.14;
+  }
+  .wrapper {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    margin-bottom: 100px;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      pointer-events: none;
+      top: 0;
+      bottom: 0;
+      width: 40px;
+      height: 100%;
+    }
+  }
+  .wrapper::before {
+    left: 0;
+    right: auto;
+    background: linear-gradient(to right, var(--grey), transparent);
+  }
+  .wrapper::after {
+    right: 0;
+    left: auto;
+    background: linear-gradient(to left, var(--grey), transparent);
+  }
+
   .list {
     flex-direction: row;
     gap: 32px;
-    padding-bottom: 100px;
+    animation: horizontalLoop 12s linear infinite;
+    & li {
+      width: 336px;
+    }
+  }
+  .list > * {
+    min-width: 45%;
+  }
+
+  @keyframes horizontalLoop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    margin-bottom: 0px;
   }
   .title {
     font-size: 28px;
     line-height: 1.14;
   }
-}
-
-@media screen and (min-width: 1440px) {
   .list {
     gap: 20px;
     flex-direction: column;
-    padding-bottom: 0px;
   }
 }

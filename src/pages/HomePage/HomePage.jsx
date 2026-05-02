@@ -10,13 +10,13 @@ const HomePage = () => {
     <>
       <Hero />
       <Filter />
-      <section className={styles.products}>
+      <div className={styles.products}>
         <ProductList />
         <aside className={styles.aside}>
           <PopularProductsList />
           <DiscountProductsList />
         </aside>
-      </section>
+      </div>
     </>
   );
 };

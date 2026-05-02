@@ -5,6 +5,7 @@ import { getPopularProducts } from '../../../api/products-api';
 import useCartBtn from '../../../helpers/useCartBtn';
 import useModal from '../../../helpers/useModal';
 import ProductModal from '../../ProductModal/ProductModal';
+import { RingLoader } from 'react-spinners';
 
 const PopularProductsList = () => {
   const [items, setItems] = useState([]);
@@ -41,12 +42,21 @@ const PopularProductsList = () => {
 
   return (
     <>
-      {isLoading && <p>...Loading</p>}
       {error && <p>{error}</p>}
-      <section className={styles.popular}>
-        <h3 className={styles.title}>Popular products</h3>
-        <ul className={styles.list}>{elements}</ul>
-      </section>
+      {isLoading ? (
+        <RingLoader
+          color="#586f1f"
+          cssOverride={{
+            display: 'block',
+            margin: '100px auto',
+          }}
+        />
+      ) : (
+        <section className={styles.popular}>
+          <h3 className={styles.title}>Popular products</h3>
+          <ul className={styles.list}>{elements}</ul>
+        </section>
+      )}
       <ProductModal selectedProductId={selectedProductId} modalIsOpen={isOpen} setModalIsOpen={closeModal} />
     </>
   );

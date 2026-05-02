@@ -7,6 +7,7 @@ import CharacteristicList from 'components/CharacteristicList/CharacteristicList
 import useCartBtn from 'helpers/useCartBtn';
 import { useDispatch } from 'react-redux';
 import { deleteProductById } from '../../redux/cart/cart-slice';
+import { RingLoader } from 'react-spinners';
 
 const ProductModal = ({ selectedProductId, modalIsOpen, setModalIsOpen }) => {
   const [item, setItem] = useState([]);
@@ -45,28 +46,37 @@ const ProductModal = ({ selectedProductId, modalIsOpen, setModalIsOpen }) => {
 
   return (
     <CustomModal isOpen={modalIsOpen} customStyles="productCard" closeModal={setModalIsOpen}>
-      {isLoading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-
-      {item && (
-        <div className={styles.modal}>
-          <div className={styles.top}>
-            <picture className={styles.picture}>
-              <img src={img} alt={name} />
-            </picture>
-            <div>
-              <div className={styles.caracteristic}>
-                <h4 className={styles.title}>{name}</h4>
-                <CharacteristicList category={category} size={size} popularity={popularity} />
+      {isLoading ? (
+        <RingLoader
+          color="#586f1f"
+          size={100}
+          cssOverride={{
+            display: 'block',
+            margin: '100px auto',
+          }}
+        />
+      ) : (
+        item && (
+          <div className={styles.modal}>
+            <div className={styles.top}>
+              <picture className={styles.picture}>
+                <img src={img} alt={name} />
+              </picture>
+              <div>
+                <div className={styles.caracteristic}>
+                  <h4 className={styles.title}>{name}</h4>
+                  <CharacteristicList category={category} size={size} popularity={popularity} />
+                </div>
+                <p className={styles.description}>{desc}</p>
               </div>
-              <p className={styles.description}>{desc}</p>
+            </div>
+            <div className={styles.bottom}>
+              <p className={styles.price}>${price}</p>
+              <CartButton id={_id} colorClass="modal" onClick={() => addClick(item)} buttonText="Add to" />
             </div>
           </div>
-          <div className={styles.bottom}>
-            <p className={styles.price}>${price}</p>
-            <CartButton id={_id} colorClass="modal" onClick={() => addClick(item)} buttonText="Add to" />
-          </div>
-        </div>
+        )
       )}
     </CustomModal>
   );

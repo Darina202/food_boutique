@@ -21,6 +21,11 @@
   font-size: 14px;
   line-height: 129%;
   padding: 8px 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--dark-green);
+  }
 }
 
 .icon {
@@ -32,6 +37,11 @@
   height: 34px;
   background: var(--green);
   fill: var(--grey);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--dark-green);
+  }
   & svg {
     width: 14px;
     height: 14px;
