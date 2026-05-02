@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# 🛒 Food Boutique 🍏
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📖 About the Project
 
-## Available Scripts
+**Food Boutique** is a modern web application for browsing and ordering food products.  
+It is built as a **Single Page Application (SPA)** using React, with full integration of an external API, filtering
+system, shopping cart, and order processing.
 
-In the project directory, you can run:
+The main goal of the project is to provide a convenient way to explore a large assortment of products. Users can filter
+items by category, search by keyword, view product details in a modal window, and manage their cart in real time.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Key Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🔍 **Dynamic Filtering & Search**  
+  Combined filtering (keyword + category + sorting)
+- 🛍️ **Smart Cart**  
+  Add/remove items, update quantity, and automatically sync total price
+- 🔄 **Real-Time Sync**  
+  Cart count and total price update instantly
+- 🌐 **API Integration**  
+  Fetch products, categories, popular items, discounts, and create orders
+- 📱 **Responsive Design**  
+  Fully адаптовано для mobile, tablet, desktop
+- ⚡ **Optimized Loading UX**  
+  Loaders (react-spinners) and lazy-loaded pages improve perceived performance
+- 🎯 **Custom UI Logic**
+  - Disabled cart button if item already exists
+  - Event propagation handling (prevent modal opening on button click)
+  - Infinite loop animation for discount products
+- 📩 **Subscription**  
+  Users can subscribe to product updates via footer form
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚙️ Technologies Used
 
-### `npm run build`
+- **React** — UI layer
+- **Redux Toolkit** — global state management
+- **React Router** — routing
+- **Axios** — API communication
+- **CSS Modules** — scoped styling
+- **React Modal** — modal windows
+- **React Spinners** — loading indicators
+- **Redux Persist** — cart persistence
+- **Create React App (CRA)** — project setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧠 Architecture Notes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Global state is managed via **Redux Toolkit**
+- Cart is persisted in **localStorage**
+- API logic is separated into service files
+- UI is split into reusable components
+- Lazy loading is used for pages via `React.lazy`
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠 How to Run the Project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+# Clone repository
+git clone https://github.com/darina202/food_boutique.git
+# Go to project folder
+cd food_boutique
+# Install dependencies
+npm install
+# Run development server
+npm start
+```
