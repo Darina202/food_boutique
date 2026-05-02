@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/food_boutique/static/css/main.22bc04fb.css",
-    "main.js": "/food_boutique/static/js/main.7fbfa8c9.js",
+    "main.js": "/food_boutique/static/js/main.32fb854b.js",
     "static/css/425.f5e94fc1.chunk.css": "/food_boutique/static/css/425.f5e94fc1.chunk.css",
     "static/js/425.07b535e3.chunk.js": "/food_boutique/static/js/425.07b535e3.chunk.js",
     "static/css/754.978cbd01.chunk.css": "/food_boutique/static/css/754.978cbd01.chunk.css",
@@ -35,7 +35,7 @@
     "static/media/subscription.png": "/food_boutique/static/media/subscription.482542d9e41c9037b63c.png",
     "index.html": "/food_boutique/index.html",
     "main.22bc04fb.css.map": "/food_boutique/static/css/main.22bc04fb.css.map",
-    "main.7fbfa8c9.js.map": "/food_boutique/static/js/main.7fbfa8c9.js.map",
+    "main.32fb854b.js.map": "/food_boutique/static/js/main.32fb854b.js.map",
     "425.f5e94fc1.chunk.css.map": "/food_boutique/static/css/425.f5e94fc1.chunk.css.map",
     "425.07b535e3.chunk.js.map": "/food_boutique/static/js/425.07b535e3.chunk.js.map",
     "754.978cbd01.chunk.css.map": "/food_boutique/static/css/754.978cbd01.chunk.css.map",
@@ -45,6 +45,6 @@
   },
   "entrypoints": [
     "static/css/main.22bc04fb.css",
-    "static/js/main.7fbfa8c9.js"
+    "static/js/main.32fb854b.js"
   ]
 }
