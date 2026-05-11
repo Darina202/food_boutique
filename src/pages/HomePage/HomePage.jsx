@@ -12,9 +12,7 @@ const HomePage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    return () => {
-      dispatch(resetFilters());
-    };
+    dispatch(resetFilters());
   }, [dispatch]);
 
   return (
