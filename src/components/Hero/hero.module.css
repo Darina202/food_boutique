@@ -31,8 +31,7 @@
 
 .box {
   border-radius: 30px;
-  background-image: image-set(url('./src/img/hero/hero-mobile.jpg') 1x, url('./src/img/hero/hero-mobile@2x.jpg') 2x);
-  /* background-image: image-set(url('/hero/hero-mobile.jpg') 1x, url('/hero/hero-mobile@2x.jpg') 2x); */
+  background-image: image-set(url('/hero/hero-mobile.jpg') 1x, url('/hero/hero-mobile@2x.jpg') 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -67,7 +66,7 @@
   }
 
   .box {
-    background-image: image-set(url('./src/img/hero/hero-tab.jpg') 1x, url('./src/img/hero/hero-tab@2x.jpg') 2x);
+    background-image: image-set(url('/hero/hero-tab.jpg') 1x, url('/hero/hero-tab@2x.jpg') 2x);
     min-height: 580px;
     border-radius: 60px;
   }
@@ -80,10 +79,7 @@
 
 @media screen and (min-width: 1440px) {
   .box {
-    background-image: image-set(
-      url('./src/img/hero/hero-desktop.jpg') 1x,
-      url('./src/img/hero/hero-desktop@2x.jpg') 2x
-    );
+    background-image: image-set(url('/hero/hero-desktop.jpg') 1x, url('/hero/hero-desktop@2x.jpg') 2x);
     min-height: 350px;
   }
   .mark {
@@ -92,69 +88,3 @@
     top: -50px;
   }
 }
-
-/* Hero.module.css з використанням @container  */
-
-/* .container {
-  container-type: inline-size;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 74px;
-} */
-
-/* --- TEXT --- */
-
-/* .title {
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  color: var(--black);
-  text-align: center;
-
-  font-size: 44px;
-  line-height: 1.1;
-  margin-bottom: 16px;
-}
-.titleColor {
-  color: var(--green);
-}
-.text {
-  text-align: center;
-  max-width: 40ch;
-  margin-bottom: 32px;
-
-  font-size: 14px;
-} */
-
-/* --- IMAGE --- */
-
-/* .img {
-  width: 100%;
-  border-radius: 30px;
-  aspect-ratio: 335 / 480; 
-  object-fit: cover;
-} */
-
-/* --- CONTAINER BREAKPOINTS --- */
-
-/* @container (min-width: 700px) {
-  .title {
-    font-size: 80px;
-  }
-
-  .text {
-    font-size: 18px;
-    margin-bottom: 40px;
-  }
-
-  .img {
-    border-radius: 60px;
-    aspect-ratio: 704 / 580;
-  }
-}
-
-@container (min-width: 1200px) {
-  .img {
-    aspect-ratio: 1240 / 350;
-  }
-}  */
