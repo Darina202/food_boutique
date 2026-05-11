@@ -1,4 +1,4 @@
-import CustomModal from 'components/Modal/Modal';
+import CustomModal from '../../Modal/Modal';
 import styles from './order-modal.module.css';
 import CartModalImage from '../../../img/checkout-image.png';
 import CartModalImage2x from '../../../img/checkout-image2x.png';

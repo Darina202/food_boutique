@@ -21,6 +21,11 @@
   height: 42px;
   font-size: 14px;
   line-height: 1.29;
+
+  &::placeholder {
+    color: rgba(232, 232, 226, 0.6);
+    opacity: 1;
+  }
 }
 
 .btn {

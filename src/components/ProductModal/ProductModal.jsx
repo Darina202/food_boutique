@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import styles from './product-modal.module.css';
 import { getProductById } from '../../api/products-api';
-import CustomModal from 'components/Modal/Modal';
-import CartButton from 'components/CartButton/CartButton';
-import CharacteristicList from 'components/CharacteristicList/CharacteristicList';
-import useCartBtn from 'helpers/useCartBtn';
+import CustomModal from '../Modal/Modal';
+import CartButton from '../CartButton/CartButton';
+import CharacteristicList from '../CharacteristicList/CharacteristicList';
+import useCartBtn from '../../helpers/useCartBtn';
 import { useDispatch } from 'react-redux';
 import { deleteProductById } from '../../redux/cart/cart-slice';
 import { RingLoader } from 'react-spinners';

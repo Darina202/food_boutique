@@ -1,6 +1,6 @@
 import styles from './header.module.css';
 import sprite from '../../img/icons.svg';
-import Logo from 'components/Logo/Logo';
+import Logo from '../Logo/Logo';
 import { NavLink } from 'react-router';
 import { useSelector } from 'react-redux';
 import { selectCartProducts } from '../../redux/cart/cart-selectors';

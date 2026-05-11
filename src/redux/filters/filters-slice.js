@@ -26,9 +26,10 @@ const filterSlice = createSlice({
       if (payload.type === 'price') state.byPrice = payload.value;
       if (payload.type === 'popularity') state.byPopularity = payload.value;
     },
+    resetFilters: () => initialState,
   },
 });
 
-export const { changeCategory, changeKeyword, setSort } = filterSlice.actions;
+export const { changeCategory, changeKeyword, setSort, resetFilters } = filterSlice.actions;
 
 export const filterReducer = filterSlice.reducer;

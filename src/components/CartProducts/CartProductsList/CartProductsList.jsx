@@ -4,7 +4,7 @@ import CartProductItem from '../CartProductItem/CartProductItem';
 import styles from './cart-product-list.module.css';
 import sprite from '../../../img/icons.svg';
 import { deleteAllProducts, deleteProductById } from '../../../redux/cart/cart-slice';
-import CartOrderForm from 'components/CartOrderForm/CartOrderForm';
+import CartOrderForm from '../../CartOrderForm/CartOrderForm';
 
 const CartProductsList = () => {
   const { cartItems } = useSelector(selectCartProducts);

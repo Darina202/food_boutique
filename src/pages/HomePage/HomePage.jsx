@@ -4,8 +4,19 @@ import PopularProductsList from '../../components/PopularProducts/PopularProduct
 import styles from './home-page.module.css';
 import DiscountProductsList from '../../components/DiscountProducts/DiscountProductsList/DiscountProductsList';
 import Filter from '../../components/Filter/Filter';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { resetFilters } from '../../redux/filters/filters-slice';
 
 const HomePage = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    return () => {
+      dispatch(resetFilters());
+    };
+  }, [dispatch]);
+
   return (
     <>
       <Hero />

@@ -22,7 +22,7 @@ items by category, search by keyword, view product details in a modal window, an
 - 🌐 **API Integration**  
   Fetch products, categories, popular items, discounts, and create orders
 - 📱 **Responsive Design**  
-  Fully адаптовано для mobile, tablet, desktop
+  Fully adapted for mobile, tablet, and desktop devices
 - ⚡ **Optimized Loading UX**  
   Loaders (react-spinners) and lazy-loaded pages improve perceived performance
 - 🎯 **Custom UI Logic**
@@ -44,7 +44,7 @@ items by category, search by keyword, view product details in a modal window, an
 - **React Modal** — modal windows
 - **React Spinners** — loading indicators
 - **Redux Persist** — cart persistence
-- **Create React App (CRA)** — project setup
+- **Vite** — fast build tool and development server
 
 ---
 
@@ -68,5 +68,5 @@ cd food_boutique
 # Install dependencies
 npm install
 # Run development server
-npm start
+npm run dev
 ```

@@ -6,11 +6,11 @@ import { fetchAllProducts } from '../../redux/products/products-operations';
 import { selectAllProducts } from '../../redux/products/products-selectors';
 import EmptyProductList from './EmptyProductList';
 import useResponsiveLimit from '../../helpers/useResponsiveLimit';
-import Pagination from '../../components/Pagination/Pagination';
+import Pagination from '../Pagination/Pagination';
 import { selectFilteredProperties } from '../../redux/filters/filters-selectors';
 import useCartBtn from '../../helpers/useCartBtn';
-import ProductModal from 'components/ProductModal/ProductModal';
-import useModal from 'helpers/useModal';
+import ProductModal from '../ProductModal/ProductModal';
+import useModal from '../../helpers/useModal';
 import { RingLoader } from 'react-spinners';
 
 const ProductList = () => {

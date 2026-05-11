@@ -1,10 +1,12 @@
 import ReactPaginate from 'react-paginate';
 import styles from './pagination.module.css';
-import sprite from '../../img/icons.svg';
+import sprite from '../../img/icons.svg?url';
+
+const SafePaginate = ReactPaginate?.default ?? ReactPaginate;
 
 const Pagination = ({ handlePageClick, totalPages, currentPage }) => {
   return (
-    <ReactPaginate
+    <SafePaginate
       breakLabel="..."
       previousLabel={
         <svg className={styles.icon}>

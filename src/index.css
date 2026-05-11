@@ -1,5 +1,14 @@
 @import-normalize; /* bring in normalize.css styles */
 
+:root {
+  --black: #010101;
+  --green: #6d8434;
+  --dark-green: #586f1f;
+  --grey: #e8e8e2;
+  --white: #ffffff;
+  --light-grey: #fafafa;
+}
+
 html {
   box-sizing: border-box;
   width: 100vw;
@@ -13,56 +22,48 @@ html {
 }
 
 @font-face {
-  font-family: 'Neue Montreal';
+  font-family: "Neue Montreal";
   src:
-    local('Neue Montreal Regular'),
-    local('Neue-Montreal-Regular'),
-    url('./fonts/NeueMontreal-Regular.woff2') format('woff2'),
-    url('./fonts/NeueMontreal-Regular.woff') format('woff'),
-    url('./fonts/NeueMontreal-Regular.ttf') format('truetype');
+    local("Neue Montreal Regular"),
+    local("Neue-Montreal-Regular"),
+    url("./fonts/NeueMontreal-Regular.woff2") format("woff2"),
+    url("./fonts/NeueMontreal-Regular.woff") format("woff"),
+    url("./fonts/NeueMontreal-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Neue Montreal';
+  font-family: "Neue Montreal";
   src:
-    local('Neue Montreal Medium'),
-    local('Neue-Montreal-Medium'),
-    url('./fonts/NeueMontreal-Medium.woff2') format('woff2'),
-    url('./fonts/NeueMontreal-Medium.woff') format('woff'),
-    url('./fonts/NeueMontreal-Medium.ttf') format('truetype');
+    local("Neue Montreal Medium"),
+    local("Neue-Montreal-Medium"),
+    url("./fonts/NeueMontreal-Medium.woff2") format("woff2"),
+    url("./fonts/NeueMontreal-Medium.woff") format("woff"),
+    url("./fonts/NeueMontreal-Medium.ttf") format("truetype");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: 'Quincy CF';
+  font-family: "Quincy CF";
   src:
-    local('Quincy CF Black'),
-    local('Quincy-CF-Black'),
-    url('./fonts/QuincyCF-Black.woff2') format('woff2'),
-    url('./fonts/QuincyCF-Black.woff') format('woff'),
-    url('./fonts/QuincyCF-Black.ttf') format('truetype');
+    local("Quincy CF Black"),
+    local("Quincy-CF-Black"),
+    url("./fonts/QuincyCF-Black.woff2") format("woff2"),
+    url("./fonts/QuincyCF-Black.woff") format("woff"),
+    url("./fonts/QuincyCF-Black.ttf") format("truetype");
   font-weight: 900;
 }
 
-:root {
-  --black: #010101;
-  --green: #6d8434;
-  --dark-green: #586f1f;
-  --grey: #e8e8e2;
-  --white: #ffffff;
-  --light-grey: #fafafa;
-}
-
 body {
-  font-family: 'Neue Montreal', sans-serif;
+  font-family: "Neue Montreal", sans-serif;
   color: var(--black);
   background: var(--grey);
   margin: 0;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 h1,
