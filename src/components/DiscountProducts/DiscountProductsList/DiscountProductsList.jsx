@@ -13,8 +13,7 @@ const DiscountProductsList = () => {
   const [error, setError] = useState(null);
   const { handleClick } = useCartBtn();
   const { isOpen, data: selectedProductId, openModal, closeModal } = useModal();
-  const loopItems = [...items, ...items];
-  console.log(loopItems);
+
   useEffect(() => {
     const fetchDiscountProducts = async () => {
       try {
@@ -30,7 +29,7 @@ const DiscountProductsList = () => {
     fetchDiscountProducts();
   }, []);
 
-  const elements = loopItems.map(item => (
+  const elements = items.map(item => (
     <DiscountProduct
       key={item._id}
       product={item}
